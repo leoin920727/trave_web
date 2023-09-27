@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Bootstrap/_css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./Bootstrap/_js/bootstrap.bundle.js"></script>
+    <link rel="shortcut icon" href="./logo1.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <title>歐美|國外旅遊|西北旅行Westnorth</title>
+</head>
+
+<body>
+    <!-- 頁首 -->
+    <header id="accordion">
+        <!-- 導覽列 -->
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="container-fluid" id="navBar">
+                <!-- icon -->
+                <a class="navbar-brand" href="./index.html"><img src="./logo001.png"></a>
+                <!-- 菜單按鈕 -->
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- 菜單內容 -->
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="position: relative;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="btn navBtn" href="#tab0" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#tab0">
+                                國外旅遊<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn navBtn" href="#tab1" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#tab1">
+                                國內旅遊<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn navBtn" href="#tab2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#tab2">
+                                國外自由行<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn navBtn" href="#tab3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#tab3">
+                                郵輪<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn navBtn" type="button" data-bs-toggle="modal" data-bs-target="#order">訂單查詢</a>
+                        </li>
+                    </ul>
+                    <!-- 會員登入 -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item  hidden" id="modalBtn0">
+                            <button class="btn btn-danger ms-3" type="button" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" id="signUp">註冊/登入</button>
+                        </li>
+                        <!-- 登出與登入資料 -->
+                        <li class="nav-item" id="modalBtn1">
+                            <a class="navbar-brand" href="#">
+                                <img src="./Lovepik_com-401561409-personal-center-icon-website-icon-app-icon-nickname-icon-person.png"
+                                    alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                                <span class="navbar-brand text-light">Tom Cruise</span>
+                            </a>
+                            <button class="btn btn-danger ms-3" type="button" onclick="logOut()">登出</button>
+                        </li>
+                    </ul>
+                    <!-- 彈跳視窗 -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="nav nav-pills modal-header p-5 pb-4 border-bottom-0">
+                                    <button class="fw-bold mb-0 fs-2 nav-link active" data-bs-toggle="pill"
+                                        data-bs-target="#signDiv0" type="button">會員註冊</button>
+                                    <button class="fw-bold mb-0 fs-2 nav-link" data-bs-toggle="pill"
+                                        data-bs-target="#signDiv1" type="button">會員登入</button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="signDiv0">
+                                        <div class="modal-body p-5 pt-0">
+                                            <form>
+                                                <small class="text-muted ms-2">姓名</small>
+                                                <div class="form-floating mb-3">
+                                                    <input type="text" class="form-control rounded-3 name"
+                                                        id="floatingName0" placeholder="Tom Cruise" autocomplete="off"
+                                                        required>
+                                                    <label for="floatingName0">Name</label>
+                                                </div>
+                                                <small class="text-muted ms-2">連絡電話</small>
+                                                <div class="form-floating mb-3">
+                                                    <input type="tel" class="form-control rounded-3 tel"
+                                                        id="floatingPhone0" placeholder="XXXX-XXX-XXX"
+                                                        autocomplete="off" required>
+                                                    <label for="floatingPhone0">Cell Phone</label>
+                                                </div>
+                                                <small class="text-muted ms-2">電子信箱</small>
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control rounded-3"
+                                                        id="floatingInput0" placeholder="name@example.com"
+                                                        autocomplete="off" required>
+                                                    <label for="floatingInput0">Email address</label>
+                                                </div>
+                                                <small class="text-muted ms-2">密碼</small>
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control rounded-3"
+                                                        id="floatingPassword0" placeholder="Password" autocomplete="off"
+                                                        required>
+                                                    <label for="floatingPassword0">Password</label>
+                                                </div>
+                                                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary signUpBtn"
+                                                    type="button">建立加入</button>
+                                                <small class="text-muted">加入即代表你同意我們的服務條款和隱私權政策</small>
+                                                <hr class="my-4">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="signDiv1">
+                                        <div class="modal-body p-5 pt-0">
+                                            <form action="./index.html">
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control rounded-3 email"
+                                                        id="floatingInput1" placeholder="name@example.com">
+                                                    <label for="floatingInput1">Email address</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control rounded-3 password"
+                                                        id="floatingPassword1" placeholder="Password"
+                                                        autocomplete="off">
+                                                    <label for="floatingPassword1">Password</label>
+                                                </div>
+                                                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary signInBtn"
+                                                    type="button">登入</button>
+                                                <hr class="my-4">
+                                                <h2 class="fs-5 fw-bold mb-3">你也可以</h2>
+                                                <button class="w-100 py-2 mb-2 btn btn-outline-success rounded-3"
+                                                    type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-line" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0ZM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157Zm.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156h-.562Zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832a.17.17 0 0 0-.013-.015v-.001a.139.139 0 0 0-.01-.01l-.003-.003a.092.092 0 0 0-.011-.009h-.001L7.88 4.79l-.003-.002a.029.029 0 0 0-.005-.003l-.008-.005h-.002l-.003-.002-.01-.004-.004-.002a.093.093 0 0 0-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.154.154 0 0 0 .039.038l.001.001.01.006.004.002a.066.066 0 0 0 .008.004l.007.003.005.002a.168.168 0 0 0 .01.003h.003a.155.155 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156h-.561Zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.155.155 0 0 0-.108.044h-.001l-.001.002-.002.003a.155.155 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.155.155 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z" />
+                                                    </svg>
+                                                    使用Line登入
+                                                </button>
+                                                <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+                                                    type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                                    </svg>
+                                                    使用Facebook登入
+                                                </button>
+                                                <button class="w-100 py-2 mb-2 btn btn-outline-danger rounded-3"
+                                                    type="button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                                                    </svg>
+                                                    使用Google登入
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="order" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="order" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content rounded-4 shadow">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 fw-bold">訂單查詢</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <form action="./order.html#orderTitle">
+                                    <div class="modal-body">
+                                        <p class="fs-2">訂單編號</p>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control rounded-3" id="floatingName3"
+                                                autocomplete="off" required>
+                                            <label for="floatingName3">請輸入您的訂單編號</label>
+                                        </div>
+                                        <p class="fs-2">E-mail</p>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control rounded-3" id="floatingmail3"
+                                                autocomplete="off" required>
+                                            <label for="floatingmail3">請輸入您的電子信箱</label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary w-100">開始查詢</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 分頁內容 -->
+        <div class="collapse" id="tab0" data-bs-parent="#accordion">
+            <div class="card-body flex-row card-shadow justify-content-center">
+                <a class="btn btn-danger ms-3" href="#">精選旅遊</a>
+                <a class="btn btn-danger ms-3" href="./tab0-us.html">歐美</a>
+                <a class="btn btn-danger ms-3" href="./tab0-jk.html">日韓</a>
+                <a class="btn btn-danger ms-3" href="./tab0-sa.html">東南亞</a>
+            </div>
+        </div>
+        <div class="collapse" id="tab1" data-bs-parent="#accordion">
+            <div class="card-body flex-row card-shadow justify-content-center">
+                <a class="btn btn-danger ms-3" href="#">國內精選</a>
+                <a class="btn btn-danger ms-3" href="./tab1.html">一日遊</a>
+                <a class="btn btn-danger ms-3" href="./tab1.html">長天數</a>
+                <a class="btn btn-danger ms-3" href="./tab1.html">高鐵假期</a>
+            </div>
+        </div>
+        <div class="collapse" id="tab2" data-bs-parent="#accordion">
+            <div class="card-body flex-row card-shadow justify-content-center">
+                <a class="btn btn-danger ms-3" href="#">精選旅遊</a>
+                <a class="btn btn-danger ms-3" href="./tab0-us.html">歐美</a>
+                <a class="btn btn-danger ms-3" href="./tab0-jk.html">日韓</a>
+                <a class="btn btn-danger ms-3" href="./tab0-sa.html">東南亞</a>
+            </div>
+        </div>
+        <div class="collapse" id="tab3" data-bs-parent="#accordion">
+            <div class="card-body flex-row card-shadow justify-content-center">
+                <a class="btn btn-danger ms-3" href="tab2.html">歌詩達郵輪</a>
+                <a class="btn btn-danger ms-3" href="tab2.html">地中海郵輪</a>
+                <a class="btn btn-danger ms-3" href="tab2.html">名勝世界輪</a>
+                <a class="btn btn-danger ms-3" href="tab2.html">龐洛郵輪</a>
+                <a class="btn btn-danger ms-3" href="tab2.html">公主郵輪</a>
+            </div>
+    </header>
+    <main>
+        <!-- 網頁輪播圖 -->
+        <div class="container-fluid p-0">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="./US/pexels-ray-bilcliff-1672813.jpg" class="d-block w-100"
+                            style="max-height: 500px;object-fit: cover;" alt="...">
+                        <div class="d-flex flex-column tabTitle p-3 d-none d-md-block w-75">
+                            <h1 class="tabColor">大峽谷國家公園</h1>
+                            <p class="tabColor fs-5">大峽谷國家公園（英語：Grand Canyon National
+                                Park）是美國西南部的國家公園，在1979年被列為世界自然遺產，以深達1500公尺，由科羅拉多河耗費萬年所切割出來的科羅拉多大峽谷景觀聞名於世。位於美國亞利桑那州的西北角。整個大峽谷走向為東西向，總長有454公里，寬度從最窄的6公里到25公里。將大峽谷分為南緣跟北緣。整個國家公園總面積為1,217,403畝。在地形上是高原地形，該地的高原稱為凱巴布高原（Kaibab）。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./CA/sergey-pesterev-tJnqdD5sO_M-unsplash.jpg" class="d-block w-100"
+                            style="max-height: 500px;object-fit: cover;" alt="...">
+                        <div class="d-flex flex-column tabTitle p-3 d-none d-md-block w-75">
+                            <h1 class="tabColor">洛磯山脈</h1>
+                            <p class="tabColor fs-5">洛磯山脈（英語：Rocky
+                                Mountains）是北美洲西部科迪勒拉山系最東端的主要山脈，和其平行的有太平洋海岸山脈、喀斯喀特山脈及內華達山脈。
+
+                                美國和加拿大對洛磯山脈的具體地理定義有所不同。加拿大定義僅從西部英屬哥倫比亞省北部的利亞德河南岸開始向西南延伸（在加拿大境內的部分專稱加拿大洛磯山脈），跨過美加邊境穿越大平原西沿直到美國西南部的新墨西哥州，綿延超過4,800公里（3,000英里）。美國定義則更向西北擴展，從阿拉斯加的布魯克斯嶺開始，穿過加拿大的育空和西北地區後與加拿大定義的洛磯山脈相連，此外還包括了西側相鄰的一些山脈。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./SA/giorgia-doglioni-G2zjqUDkYSQ-unsplash.jpg" class="d-block w-100"
+                            style="max-height: 500px;object-fit: cover;" alt="...">
+                        <div class="d-flex flex-column tabTitle p-3 d-none d-md-block w-75">
+                            <h1 class="tabColor">馬丘比丘</h1>
+                            <p class="tabColor fs-5">馬丘比丘（西班牙語：Machu Picchu ，奇楚亞語：Machu
+                                Piqchu，其意為「古老的山」），又譯麻丘比丘、瑪丘皮丘，是一座建於前哥倫布時期（15世紀）的印加帝國城市遺蹟，位於秘魯南部的秘魯東部山脈，庫斯科西北方80公里處，整個遺址高聳在海拔2,430公尺（7,970英尺）的山脊上，俯瞰著烏魯班巴河谷
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./EU/pexels-chris-schippers-427679.jpg" class="d-block w-100"
+                            style="max-height: 500px;object-fit: cover;" alt="...">
+                        <div class="d-flex flex-column tabTitle p-3 d-none d-md-block w-75">
+                            <h1 class="tabColor">倫敦塔橋</h1>
+                            <p class="tabColor fs-5">倫敦塔橋（英語：Tower
+                                Bridge）是英國倫敦一座橫跨泰晤士河的一座高塔式鐵橋，可登入參觀塔橋的建造歷史及俯瞰整個泰晤士河美景，也因位於倫敦塔附近而更馳名。
+
+                                倫敦塔橋有時會與倫敦橋（London Bridge）混淆，真正的倫敦橋是另一座不同的橋梁，位於倫敦塔橋的上游，兩橋僅相距約1公里，倫敦塔橋現在成為倫敦最著名的旅遊景點之一。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 網頁內容 -->
+        <div class="container-fluid tab0Main">
+            <!-- 搜尋表單 -->
+            <div class="container p-2 m-auto  shadow-lg" id="tabSearch">
+                <form action="#" id="searchForm">
+                    <div class="row">
+                        <!-- 旅行方式 -->
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                    </svg></span>
+                                <div class="form-floating">
+                                    <select class="form-select" id="formSelect" placeholder="想要的旅行方式">
+                                        <option value="國外旅遊" selected>國外旅遊</option>
+                                        <option value="國內旅遊">國內旅遊</option>
+                                        <option value="自由行">自由行</option>
+                                        <option value="郵輪">郵輪</option>
+                                    </select>
+                                    <label for="formSelect">想要的旅行方式</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 地圖欄 -->
+                        <div class="col-md-4" style="position: relative;">
+                            <div class="input-group">
+                                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                    </svg></span>
+                                <div class="form-floating">
+                                    <input type="text" name="123" id="inputSearch" class="form-control"
+                                        autocomplete="off" placeholder="選擇想去的地區或國家">
+                                    <label for="inputSearch">選擇想去的地區或國家</label>
+                                </div>
+                            </div>
+                            <!-- 國家區域 -->
+                            <div class="searchDiv tabSearchDiv" class="p-3">
+                                <div class="row">
+                                    <div class="col-4 d-flex">
+                                        <ul class="d-flex flex-column p-3">
+                                            <li class="btn mapBtn active">歐美</li>
+                                            <li class="btn mapBtn">日韓</li>
+                                            <li class="btn mapBtn">東南亞</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 區域地圖 -->
+                                    <div class="col-8 tab-content">
+                                        <!-- 歐美國家 -->
+                                        <ul class="tab-pane map p-3 active">
+                                            <li class="LL btn">美國</li>
+                                            <li class="LL btn">加拿大</li>
+                                            <li class="LL btn">中南美州</li>
+                                            <li class="LL btn">中西歐</li>
+                                            <li class="LL btn">南北歐</li>
+                                            <li class="LL btn">東歐</li>
+                                        </ul>
+                                        <!-- 東北亞國家 -->
+                                        <ul class="tab-pane map p-3">
+                                            <li class="LL btn">北海道</li>
+                                            <li class="LL btn">關東</li>
+                                            <li class="LL btn">關西</li>
+                                            <li class="LL btn">首爾</li>
+                                            <li class="LL btn">釜山</li>
+                                            <li class="LL btn">濟州</li>
+                                        </ul>
+                                        <!-- 東南亞國家 -->
+                                        <ul class="tab-pane map p-3">
+                                            <li class="LL btn">泰國</li>
+                                            <li class="LL btn">馬來西亞</li>
+                                            <li class="LL btn">新加坡</li>
+                                            <li class="LL btn">越南</li>
+                                            <li class="LL btn">菲律賓</li>
+                                            <li class="LL btn">巴厘島</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 國家區域2 -->
+                            <div class="searchDiv tabSearchDiv" class="p-3">
+                                <div class="row">
+                                    <div class="col-4 d-flex">
+                                        <ul class="d-flex flex-column p-3">
+                                            <li class="btn mapBtn active">都市旅遊</li>
+                                            <li class="btn mapBtn">偏鄉旅遊</li>
+                                            <li class="btn mapBtn">外島</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 區域地圖2 -->
+                                    <div class="col-8 tab-content">
+                                        <!-- 都市旅遊 -->
+                                        <ul class="tab-pane map p-3 active">
+                                            <li class="LL btn">台北市</li>
+                                            <li class="LL btn">新北市</li>
+                                            <li class="LL btn">臺中市</li>
+                                            <li class="LL btn">高雄市</li>
+                                            <li class="LL btn">台南市</li>
+                                            <li class="LL btn">桃園市</li>
+                                            <li class="LL btn">嘉義市</li>
+                                            <li class="LL btn">新竹市</li>
+                                            <li class="LL btn">基隆市</li>
+                                        </ul>
+                                        <!-- 偏鄉旅遊 -->
+                                        <ul class="tab-pane map p-2">
+                                            <li class="LL btn">宜蘭縣</li>
+                                            <li class="LL btn">南投縣</li>
+                                            <li class="LL btn">花蓮縣</li>
+                                            <li class="LL btn">台東縣</li>
+                                            <li class="LL btn">屏東縣</li>
+                                            <li class="LL btn">雲林縣</li>
+                                            <li class="LL btn">彰化縣</li>
+                                            <li class="LL btn">苗栗縣</li>
+                                            <li class="LL btn">嘉義縣</li>
+                                            <li class="LL btn">新竹縣</li>
+                                        </ul>
+                                        <!-- 離島 -->
+                                        <ul class="tab-pane map p-3">
+                                            <li class="LL btn">澎湖縣</li>
+                                            <li class="LL btn">金門縣</li>
+                                            <li class="LL btn">馬祖縣</li>
+                                            <li class="LL btn">小琉球</li>
+                                            <li class="LL btn">綠島</li>
+                                            <li class="LL btn">蘭嶼</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 國家區域3 -->
+                            <div class="searchDiv tabSearchDiv" class="p-3">
+                                <div class="row">
+                                    <div class="col-4 d-flex">
+                                        <ul class="d-flex flex-column p-3">
+                                            <li class="btn mapBtn active">東北亞</li>
+                                            <li class="btn mapBtn">東南亞</li>
+                                            <li class="btn mapBtn">中國/香港</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 區域地圖3 -->
+                                    <div class="col-8 tab-content">
+                                        <!-- 東北亞 -->
+                                        <ul class="tab-pane map active p-3">
+                                            <li class="LL btn">東京</li>
+                                            <li class="LL btn">大阪</li>
+                                            <li class="LL btn">沖繩</li>
+                                            <li class="LL btn">北海道</li>
+                                            <li class="LL btn">九州</li>
+                                            <li class="LL btn">名古屋</li>
+                                            <li class="LL btn">首爾</li>
+                                            <li class="LL btn">濟州</li>
+                                            <li class="LL btn">釜山</li>
+                                        </ul>
+                                        <!-- 東南亞 -->
+                                        <ul class="tab-pane map p-3">
+                                            <li class="LL btn">泰國</li>
+                                            <li class="LL btn">新加坡</li>
+                                            <li class="LL btn">馬來西亞</li>
+                                            <li class="LL btn">印尼</li>
+                                        </ul>
+                                        <!-- 中國/香港 -->
+                                        <ul class="tab-pane map p-3">
+                                            <li class="LL btn">上海</li>
+                                            <li class="LL btn">廈門</li>
+                                            <li class="LL btn">香港</li>
+                                            <li class="LL btn">澳門</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 國家區域4 -->
+                            <div class="searchDiv tabSearchDiv" class="p-3">
+                                <div class="row">
+                                    <div class="col-4 d-flex">
+                                        <ul class="d-flex flex-column p-3">
+                                            <li class="btn mapBtn active">郵輪</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 區域地圖4 -->
+                                    <div class="col-8 tab-content">
+                                        <!--郵輪 -->
+                                        <ul class="tab-pane map active p-3">
+                                            <li class="LL btn">歌詩達郵輪</li>
+                                            <li class="LL btn">公主郵輪</li>
+                                            <li class="LL btn">地中海郵輪</li>
+                                            <li class="LL btn">名勝世界郵輪</li>
+                                            <li class="LL btn">龐洛郵輪</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 日期 -->
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <div class="form-floating col-3">
+                                    <input type="date" name="day" id="day" class="form-control" placeholder="出發日期">
+                                    <label for="day">出發日期</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 表單按鈕 -->
+                        <div class="row">
+                            <div class="col d-flex justify-content-end m-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="signUp">
+                                    <label class="form-check-label" for="signUp">
+                                        可報名
+                                    </label>
+                                </div>
+                                <div class="form-check ms-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="readyToGo" checked>
+                                    <label class="form-check-label" for="readyToGo">
+                                        可出團
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-primary ms-3" id="formBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 18 18">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>開始查詢
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 導覽列 -->
+            <nav class="container-fluid tab0Nav p-3"
+                style="--bs-breadcrumb-divider: '>';border-bottom: 1px solid white;" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">國外旅遊</li>
+                </ol>
+                <div class="d-flex justify-content-center">
+                    <div class="nav bg-light p-2 tab0Gbtn">
+                        <button class="btn tab0Btn active" data-bs-toggle="tab" data-bs-target="#tab0Div0">美國</button>
+                        <button class="btn tab0Btn" data-bs-toggle="tab" data-bs-target="#tab0Div1">加拿大</button>
+                        <button class="btn tab0Btn" data-bs-toggle="tab" data-bs-target="#tab0Div2">中南美</button>
+                        <button class="btn tab0Btn" data-bs-toggle="tab" data-bs-target="#tab0Div3">歐洲</button>
+                    </div>
+                </div>
+            </nav>
+            <!-- 分頁內容 -->
+            <div class="container tab-content">
+                <!-- 美國分頁 -->
+                <div class="tab-pane fade show active" id="tab0Div0">
+                    <!-- 介紹 -->
+                    <div class="py-3">
+                        <!-- 卡片1 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./US/us01.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">優山美地國家公園（英語：Yosemite National Park、/joʊˈsɛmɪti/
+                                yoh-SEM-it-ee）是美國加州中東部橫跨圖奧勒米縣、馬里波薩縣和馬德拉縣東部部分地區的國家公園。該公園占地747,956英畝（1,168.681平方英里；302,687公頃；3,026.87平方公里）並橫跨內華達山脈西坡。優山美地國家公園每年大約有三百八十多萬遊客造訪：大部分人在七平方英里（約合十八平方公里）的優山美地山谷逗留。1984年，優山美地被選定為世界自然遺產，其壯觀的花崗岩峭壁、瀑布、清澈的溪流、巨型紅杉林和生物多樣性為國際所公認。該公園大約95%的地方被指定為公共莽原區。優山美地雖然不是第一個指定的國家公園，但它對國家公園這個概念的發展起到了支配作用。這主要是由於像蓋倫·克拉克和約翰·繆爾等人的工作所起的作用。
+                            </div>
+                        </div>
+                        <!-- 卡片2 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./US/us02.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">金門大橋（英語：Golden Gate
+                                Bridge），是一座位於美國加利福尼亞州舊金山的懸索橋，它跨越聯接舊金山灣和太平洋的金門海峽，南端連接舊金山的北端，北端接通馬林縣。
+
+                                金門大橋它最初由工程師約瑟夫·斯特勞斯於1917年設計，其橋墩跨距長1280.2米，建成時曾是世界上跨距最大的懸索橋，主跨度為4,200英尺（1,280公尺），總高度為746英尺（227公尺），該紀錄直到1964年被韋拉札諾海峽大橋，以及1993年被梅斯卡拉橋超越。,金門大橋設有寬度27.5米，雙向共6條行車線。除了美國101號公路和加利福尼亞州1號公路藉由大橋外穿過海峽。金門大橋還能承載行人和自行車交通，並被指定為美國自行車路線95號的一部分。
+                            </div>
+                        </div>
+                        <!-- 卡片3 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./US/us03.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">中央公園（英語：Central
+                                Park）是紐約市曼哈頓中心的一座大型都會公園，位於上東區和上西區之間，造訪人數在美國居首，2013年共吸引4000萬人參觀。中央公園也是眾多電影的取景地。
+
+                                公園最早是在1857年開放，當時的面積為778英畝（315公頃）。1858年，弗雷德里克·奧姆斯德以「草坪計劃」（Greensward
+                                Plan）贏得了擴展公園的設計競賽，同年開始施工次年開始部分區域向公眾開放
+                                ，南北戰爭時向北擴建，後在1873年完工，現面積843英畝（341公頃），長約4公里、寬約0.8公里。
+
+                                中央公園在1962年被美國內政部指定為國家歷史名勝，在紐約市公園和娛樂部管理數十年後目前由中央公園保存委員會與市政府簽約負責管理。保存委員會是一個非營利組織，在中央公園的6700萬美元的年間預算中，提供了75%的金額。
+                            </div>
+                        </div>
+                        <!-- 卡片4 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./US/us04.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">尼加拉大瀑布（英語：Niagara
+                                Falls，源自印第安語，意為「雷神之水」，加拿大的華人也稱之為「拉格科瀑布」）是由三座位於北美洲五大湖區尼加拉河上瀑布的總稱，平均流量為2,407立方公尺/秒，與伊瓜蘇瀑布、維多利亞瀑布並稱為世界三大跨國瀑布。尼加拉大瀑布以美麗的景色，巨大的水力發電能力和極具挑戰性的環境保護工程而聞名於世，是非常受遊客歡迎的旅遊景點。
+
+                                整個瀑布跨越加拿大的安大略省和美國的紐約州構成南部的尼加拉峽谷。三座瀑布按規模從大到小分別為馬蹄瀑布，美國瀑布，布里達爾維爾瀑布。其中，馬蹄瀑布位於美國和加拿大的邊境，美國瀑布全部位於美國境內並由山羊島分隔開。小些的布里達爾維爾瀑布也在美國境內，由月神島從美國瀑布隔開。
+                            </div>
+                        </div>
+                        <!-- 卡片5 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./US/us05.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">黃石國家公園（簡稱黃石公園，英語：Yellowstone National
+                                Park）是美國第一個國家公園。主要位於懷俄明州，部分位於蒙大拿州和愛達荷州，於1872年3月1日美國總統尤利西斯·辛普森·格蘭特簽署國會通過的法案後建立，是世界上第一座國家公園。黃石公園以其豐富的野生動物種類和地熱資源聞名，老忠實間歇泉更是其中最富盛名的景點之一。公園中有著多種類型的生態系統，其中以亞高山帶森林為主。
+                            </div>
+                        </div>
+                        <!-- 卡片6 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./US/us06.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">大峽谷（英語：Grand Canyon，霍皮語：
+                                Ongtupqa，亞瓦派語：Wi:kaʼi:la）位於美國亞利桑那州西北部，是科羅拉多河經過數百萬年以上的沖蝕而形成，色彩斑斕，峭壁險峻。1979年大峽谷被列入世界遺產。在許多非權威版本的世界八大自然奇觀列表上都有大峽谷的名字。目前由美國大峽谷國家公園管理。
+
+                                大峽谷總長446公里，平均深度有1200公尺，寬度從0.5公里至29公里不等。科羅拉多高原抬升時，科羅拉多河及其支流切割層層沉積岩，由此形成了大峽谷。將近20億年來的地質變遷史一覽無餘。
+
+                                1540年，一個名叫加西亞·洛佩茲·德·卡迪納斯（García López de
+                                Cárdenas）的西班牙人最先發現了大峽谷。19世紀70年代，美國陸軍少校約翰·威斯利·鮑威爾率領第一支科學考察隊前往大峽谷。鮑威爾將谷中的沉積岩層形容為「一本巨型小說中的書頁」。然而，此前已有美洲印第安人在峽谷壁上定居了。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 購買卡片內容 -->
+                    <div class="container border-top py-3">
+                        <div class="row row-cols-1 row-cols-md-4 g-3 a0">
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./US/us01.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《玩美加族》臥谷長榮美西９日~大峽谷、優勝美地(舊金山進)</h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>舊金山/洛杉機/拉斯維加斯 , 美國</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./US/us02.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《玩美加族》美西雙國家公園雙樂園九日遊</h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>舊金山/洛杉機/拉斯維加斯 , 美國</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./US/us03.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">【國泰知旅】楓賞美加東１３日－三遊船、名城美饌、升等面瀑布房 </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>舊金山/洛杉機/拉斯維加斯 , 美國</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./US/us04.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《玩美加族》美加東全覽１３日-紐約進多倫多出 </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>舊金山/洛杉機/拉斯維加斯 , 美國</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 加拿大分頁 -->
+                <div class="tab-pane fade" id="tab0Div1">
+                    <!-- 介紹 -->
+                    <div class="py-3">
+                        <!-- 卡片1 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./CA/ca01.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">魁北克歷史城區（英語：Old
+                                Quebec；法語：Vieux-Québec）位於加拿大魁北克省的省府魁北克市市內。面積約1.35平方千米。原是北美印第安人部落的村聚。1608年法國一名探險家率先對魁北克地進行開發建成，隨後其成為新法蘭西的首府。英法七年戰爭後歸英國所有，1791年，成為英屬北美下加拿大省的首府。
+
+                                魁北克古城的城中心位於一塊高地上，並保留著北美地區唯一留存至今的古城墻，全長4.6公里。古城區分上城區於下城區兩大部分。作為魁北克歷史城區的標誌建築的芳堤娜城堡就坐落於上城區，聳立於戴蒙德角的最高點。
+
+                                魁北克歷史城區作為北美殖民化以及近代化進程的重要歷史見證，於1985年被列入世界文化遺產，目前則是魁北克最著名的旅遊景點。</div>
+                        </div>
+                        <!-- 卡片2 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./CA/ca02.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">洛磯山脈（英語：Rocky
+                                Mountains）是北美洲西部科迪勒拉山系最東端的主要山脈，和其平行的有太平洋海岸山脈、喀斯喀特山脈及內華達山脈。
+
+                                美國和加拿大對洛磯山脈的具體地理定義有所不同。加拿大定義僅從西部英屬哥倫比亞省北部的利亞德河南岸開始向西南延伸（在加拿大境內的部分專稱加拿大洛磯山脈），跨過美加邊境穿越大平原西沿直到美國西南部的新墨西哥州，綿延超過4,800公里（3,000英里）。美國定義則更向西北擴展，從阿拉斯加的布魯克斯嶺開始，穿過加拿大的育空和西北地區後與加拿大定義的洛磯山脈相連，此外還包括了西側相鄰的一些山脈。
+
+                                洛磯山脈的最高峰是埃爾伯特峰，位於科羅拉多州境內，高度有4,401米。羅布森山則是加拿大境內的最高峰，高度為3,954米。整個洛磯山脈系統是美國地文區的一大部份。
+
+                                當時有許多板塊在北美洲板塊下移動。隱沒帶的角度很淺，因此造成北美西部廣闊的山脈帶。進一步的板塊構造活動及冰河的侵蝕，使洛磯山脈出現顯著的山峰及峽谷，在第四紀冰河時期結束時，人類開始在洛磯山脈居住。在歐洲人（例如亞歷山大麥肯齊）及美洲人（如劉易斯與克拉克）發現此地區後，開始在此地採礦及打獵製作毛皮，不過洛磯山脈的人口還是不多。
+                            </div>
+                        </div>
+                        <!-- 卡片3 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./CA/ca03.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">班芙國家公園（英語：Banff National Park，法語：Le Parc national
+                                Banff）建於1885年，是加拿大歷史最悠久的國家公園。它坐落於落磯山脈北段，距加拿大亞伯達省卡加利以西約110-180公里處。公園共占地6641平方公里，遍布冰川、冰原、松林和高山。冰原公路從路易斯湖開始，一直連接到北部的賈斯珀國家公園。西面是省級森林和幽鶴國家公園，南面與庫特尼國家公園毗鄰，卡納納斯基斯鎮位於其東南方。公園內主要的商業區為弓河山谷的班夫鎮。它作為「加拿大落磯山脈公園群」的一部分，與其它加拿大落磯山脈的國家和省立公園一起被列入世界遺產名錄中。
+
+                                加拿大太平洋鐵路是早期通往班夫的方式，太平洋鐵路集團在公園內建造了班夫溫泉酒店和路易斯湖城堡酒店，吸引了大量遊客前往。20世紀初期，在一戰和大蕭條期間，通往班夫的公路建成。1960年開始公園全年對外開放，1990年遊客數量達到了500萬人次。
+                                上百萬的遊客通過加拿大橫貫公路前往。由於班夫國家公園是全球最受歡迎的公園之一，生態系統開始受到影響和破壞。1990年代中期，加拿大公園管理局啟動了一個為期兩年的研究項目，頒布了一系列的措施，試圖控制遊客數量，保護生態環境。
+                            </div>
+                        </div>
+                        <!-- 卡片4 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./CA/ca04.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">
+                                渥太華（英語：Ottawa）是加拿大的聯邦首都，全國第四大城市，市區人口是934,243人，首都圈地區是1,323,783人（根據2016年人口普查），面積2,779平方公里，位於安大略省東南部，渥太華河南岸，多倫多以東400公里，蒙特婁以西190公里。與美國、澳大利亞等國不同，渥太華不是聯邦直轄的行政區，但是渥太華土地管理和城市規劃是由國家首都委員會（National
+                                Capital Commission）負責。
+
+                                在1826年9月26日以「Bytown」之名建立，1850年1月1日合併為一個城鎮，並於1855年1月1日以「渥太華」之名合併取代。並不斷發展成為加拿大的政治和工業技術中心。城市的原有邊界由後來經過多次的小規模兼並而擴大的。「渥太華」這個名稱是來自渥太華人，在亞岡昆語（Algonquin
+                                language）中的adawe，意思為「貿易」。渥太華常被華人簡稱為渥京。
+
+                                根據美世諮詢的排名，渥太華是北美生活品質第一的城市。同時也是加拿大第二乾淨的城市和全球第三乾淨的城市。渥太華連續被聯合國評為10個最適宜人類居住的城市之一。</div>
+                        </div>
+                        <!-- 卡片5 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./CA/ca05.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">加拿大國家電視塔（英語：CN Tower；法語：Tour
+                                CN；又譯加拿大國家塔、西恩塔、CN塔）是一座位於加拿大安大略省多倫多的電波塔。英文原名裡的「CN」最初是「Canadian
+                                National」首字母縮寫，現在則是「Canada's
+                                National」的縮寫，但兩個名稱皆不常使用。塔高553.33米，現為世界上第五高的自立式建築物。該塔被認為是多倫多的地標，每年吸引超過200萬人次參觀。自從在1976年落成後，該塔一直被金氏世界紀錄大全紀錄為最高的建築物，直至被哈里發塔超越為止。但從專業角度看，加拿大國家電視塔並不是一個建築物，而是一個非建築結構物
+                            </div>
+                        </div>
+                        <!-- 卡片6 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./CA/ca06.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">聖母聖殿 （法語：Basilique Notre-Dame de Montréal，英語：Notre-Dame
+                                Basilica）是一座羅馬天主教的宗座聖殿，位於加拿大蒙特婁老城區的聖母西街110號，與聖敘爾皮斯街轉角，毗鄰聖敘爾皮斯神學院，面對兵器廣場（Place
+                                d'Armes）。教堂始建於1672年。
+
+                                聖母聖殿為哥特復興式建築，內部宏偉，色彩絢麗，天花板為深藍色，裝飾金色的星星，其餘地方藍色，紅色，紫色，銀色和金色。內部有數百木雕。不尋常的是，花窗玻璃沒有描繪聖經的場景，而是描繪蒙特婁宗教歷史的場景。還有一台Casavant
+                                Frères管風琴。</div>
+                        </div>
+                    </div>
+                    <!-- 購買卡片內容 -->
+                    <div class="container border-top py-3">
+                        <div class="row row-cols-1 row-cols-md-4 g-3 a0">
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./CA/ca02.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《玩美加族》美加東全覽１３日-多倫多進紐約出 </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>士頓/紐約/費城/華盛頓/渥太華/多倫多/蒙特婁/魁北克 , 美國/加拿大</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./CA/ca03.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《玩美加族》楓流加東１２日-雙遊船、雙纜車、賞楓大道</h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            蒙特婁/渥太華/魁北克/多倫多/金斯頓 , 加拿大</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./CA/ca01.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《玩美加族》加拿大全覽１３日-洛磯山脈、魁北克古城 </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>多倫多/渥太華/魁北克/蒙特婁/班夫鎮/科隆納/維多利亞/溫哥華 , 加拿大</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 中南美分頁 -->
+                <div class="tab-pane fade" id="tab0Div2">
+                    <!-- 介紹 -->
+                    <div class="py-3">
+                        <!-- 卡片1 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./SA/sa01.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">馬丘比丘（西班牙語：Machu Picchu，奇楚亞語：Machu
+                                Piqchu，其意為「古老的山」），又譯麻丘比丘、瑪丘皮丘，是一座建於前哥倫布時期（15世紀）的印加帝國城市遺蹟，位於秘魯南部的秘魯東部山脈，庫斯科西北方80公里處，整個遺址高聳在海拔2,430公尺（7,970英尺）的山脊上，俯瞰著烏魯班巴河谷。
+
+                                與瑪雅文明相比，由於印加文明沒有書面語言的紀錄，直到19世紀末期才有對於發現該遺址的紀錄。考古學家認為，馬丘比丘是薩帕·印卡帕查庫蒂（1438-1472）建造的，由於獨特的位置、地址特點和發現時間較晚（在1911年），馬丘比丘成了印加帝國最為人所熟悉的標誌。它通常被稱為「印加失落之城」。
+                            </div>
+                        </div>
+                        <!-- 卡片2 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./SA/sa02.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">救世基督像（葡萄牙語：Cristo
+                                Redentor）是一座裝飾藝術風格的大型耶穌基督雕像，位於巴西的里約熱內盧，是該市的標誌，也是世界最聞名的紀念雕塑之一，2007年入選世界新七大奇蹟。
+
+                                基督像落成於1931年，總高38公尺，站立在里約熱內盧國家森林公園中高710公尺的駝背山頂，俯瞰著整個城市。張開雙臂歡迎來自世界各地的遊客，是巴西人民熱情接納和寬闊胸懷的象徵。
+                            </div>
+                        </div>
+                        <!-- 卡片3 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./SA/sa03.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">太陽金字塔（西班牙語：Pirámide del
+                                Sol），是墨西哥提奧提華坎遺蹟中最大的建築，也是中美洲最大的建築之一。它位於「亡者之路」中段的東側，也位於月亮金字塔（Pyramid of the Moon）與被稱為「The
+                                Ciudadela」的小型金字塔之間，塞羅戈多山（Cerro Gordo）附近，也是提奧提華坎遺蹟核心巨大複合體的一部份。</div>
+                        </div>
+                        <!-- 卡片4 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./SA/sa04.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">大藍洞（Great Blue
+                                Hole）是全世界最大的水下洞穴，位於貝里斯外海約60哩（96.5公里）處，鄰近燈塔礁（Lighthouse
+                                Reef）。大藍洞外觀呈圓形，直徑約1000呎（304公尺），深約400呎（122公尺）。大藍洞為石灰岩洞，形成於海平面較低的冰河時期，後來因為海水上升，洞頂隨之塌陷，遂變成水下洞穴。
+
+
+                                橫切面
+                                現今的大藍洞是一個名聞遐邇的潛水勝地，世界著名的水肺潛水專家雅各-伊夫·庫斯托（Jacques-Yves
+                                Cousteau）將大藍洞評為世界十大潛水寶地之一，並於1971年進行探勘測繪。</div>
+                        </div>
+                        <!-- 卡片5 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./SA/sa05.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">復活節島（西班牙語：Isla de Pascua），又稱拉帕努伊（拉帕努伊語：Rapa
+                                Nui），另有依照英語音譯為伊斯特島（Easter
+                                Island），是南太平洋中的一個島嶼，位於智利以西外海約3600到3700公里處，座標為27°09′S
+                                109°27′W，約與智利港口卡爾德拉在同一緯度，較聖地牙哥偏北，為智利的特殊領地。復活島是世界上最與世隔絕的島嶼之一，離其最近有人定居的皮特肯群島也有2,075公里遠。為瓦爾帕萊索大區瓦爾帕萊索省的一個特別行政區域。該島形狀近似呈一三角形，由三座火山組成，面積為163.6平方公里。與胡安·費爾南德斯群島並為智利在南太平洋的兩個屬地。
+                            </div>
+                        </div>
+                        <!-- 卡片6 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./SA/sa06.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">冰河國家公園 （西班牙語：Parque Nacional Los
+                                Glaciares）是巴塔哥尼亞地區的一座國家公園，位於阿根廷聖克魯斯省，總面積4459 km²。1981年被聯合國教科文組織列入世界遺產。
+
+                                冰河國家公園建立於1937年，是阿根廷第二大的國家公園。公園名稱里的「冰河」指的是在安第斯山脈附近的47個巨大的冰蓋，其中有13個流向大西洋。國家公園裡的冰蓋是世界上除了南極和格陵蘭以外最大的。在世界的其他地方，冰河至少要在平均海拔高於2500米的高度處才開始形成，但由於這裡冰河的規模較大，1500米時即形成了冰河。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 購買卡片內容 -->
+                    <div class="container border-top py-3">
+                        <div class="row row-cols-1 row-cols-md-4 g-3 a0">
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./SA/sa01.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《玩美加族》經典秘魯12日─馬丘比丘、沙漠生態奇景(長榮航空) </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>利馬 , 秘魯</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 歐洲分頁 -->
+                <div class="tab-pane fade" id="tab0Div3">
+                    <!-- 介紹 -->
+                    <div class="py-3">
+                        <!-- 卡片1 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./EU/eu01.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">雅典衛城（希臘語：Ακρόπολη，英語：Acropolis of
+                                Athens）位於希臘首都雅典，是最著名的衛城（要塞城市）之一。衛城是由平頂岩構成，位於海拔157米（536英呎）。
+
+                                雅典衛城現存的建築群共包含幾座具有重大建築和歷史意義的古代建築遺跡，其中最著名的是帕德嫩神廟。「衛城」該詞則是來自希臘文「ἄκρον」（akron，亦為『最高點，極端』）和「πόλις」（polis，亦為『城市』）的結合。衛城一詞是通用的，在古希臘時期時，儘管希臘還有許多其他衛城，而在雅典衛城其亦被命名為西哥羅佩（Cecropia），以紀念常被描繪為半人半蛇的雅典首任國王凱克洛普斯。
+
+                                有證據表明雅典衛城早在公元前四千年就有人居住，後則於伯里克利在公元前五世紀推動了建築物的建造，目前雅典衛城的遺跡是世界上最重要的古文明遺址，也被聯合國教科文組織指定為世界文化遺產。
+                            </div>
+                        </div>
+                        <!-- 卡片2 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./EU/eu02.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">米蘭主教座堂（義大利語：Duomo di Milano；倫巴底語：Domm de
+                                Milan）位於義大利倫巴底大區米蘭市中心的大教堂廣場，是天主教米蘭總教區的主教座堂。它從始建到建成共花費了六個世紀，是義大利最大的教堂（梵蒂岡不屬於義大利，聖伯多祿大殿最大）、歐洲第二大及世界第三大教堂。
+
+                                米蘭主教座堂的建造始於1386年，而於1965年最後一扇銅門就位後才正式完工。歷經五個多世紀才完工，因此，它的建築風格包含了哥德式、新古典式和新哥德式。
+
+                                使用白大理石的教堂建築風格十分獨特，上半部分是哥德式的尖塔，據統計共135座，最高的尖塔高達108.5米，頂端有一尊4.2米的聖母瑪利亞像，上鍍黃金。下半部分是典型的巴洛克式風格，從上而下滿飾雕塑，極盡繁複精美，是文藝復興時期具有代表性的建築物。
+                            </div>
+                        </div>
+                        <!-- 卡片3 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./EU/eu03.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">大英博物館（英語：British
+                                Museum）是一座位於英國倫敦布魯姆斯伯里的綜合性博物館，成立於1753年，自1759年1月15日起正式對公眾開放，是世界上首個國家博物館，也是世界上規模最大且最著名的博物館之一。館內現有800多萬件藏品，大批藏品因館內空間限制未能公開展出。
+
+                                大英博物館的緣起可追溯至17–18世紀的英國醫生暨自然歷史學家漢斯·斯隆爵士（1660–1753），他在去世前立下遺囑，將他所收藏的近8萬件珍貴物什全部捐贈給國家，由此奠定了大英博物館的基礎。在經過公眾籌款募得建造資金後，大英博物館最終於倫敦的蒙塔古宮（英文：Montague
+                                House）落成。此後的250年間，英國透過在海外殖民擴張收穫了大量文物，使得大英博物館的藏品不斷增多，並促成了幾個博物館分支機構的誕生。1880年，大英博物館將文物與自然歷史類藏品（生物標本、化石等）分離，館內主要收藏文物，而自然歷史類藏品則轉入其分館——位於倫敦南肯辛頓的自然史博物館。該分館成立於1881年，是大英博物館的首個分支機構。至19世紀初，蒙塔古宮有限的空間已顯得不敷使用，於是1824年博物館決定在蒙塔古宮北面建造一座新館。1840年代新館建成後，原先的蒙塔古宮隨即被拆除。
+                            </div>
+                        </div>
+                        <!-- 卡片4 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./EU/eu04.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">
+                                羅馬競技場（義大利語：Colosseo，又譯作羅馬鬥獸場、羅馬大角鬥場、科洛西姆或哥羅塞姆；原名弗萊文圓形劇場，拉丁語：Anfiteatro
+                                Flavio / Amphitheatrvm
+                                falvvm）是古羅馬時期最大的圓形角鬥場，建於公元72年-82年間，現僅存遺蹟位於現今義大利羅馬市的中心。羅馬競技場是卵形的圓形劇場，也是目前最大的圓形劇場，使用材料包括洞石、凝灰岩及磚飾面的混凝土。
+
+                                羅馬競技場估計可以容納五萬至八萬名觀眾，平均觀眾約六萬五千人。羅馬競技場用來進行角鬥士的比賽、海戰表演（不過只有短暫的時間，後來鬥獸場地下室就開始安裝其他的設備了）、處決、重要戰役的歷史重演、以及演出以羅馬神話為基礎的戲劇。在中世紀前期已不再將羅馬競技場用在娛樂用途，後來用作住宅、工作坊、聖職人員宿舍、防禦工事、採石場以及基督教聖地等用途。
+
+                                羅馬競技場中有部份因為地震以及盜石賊的破壞而受損，不過仍然是羅馬帝國的代表性建築物。羅馬競技場是羅馬著名的旅遊景點之一，也和天主教教會有關，教宗在每年聖週五帶領的苦路遊行都會從羅馬競技場附近開始。義大利版本的5歐分硬幣上面就是以羅馬競技場為主題。羅馬競技場也列名在中古世界七大奇蹟及世界新七大奇蹟中。1980年，羅馬競技場以羅馬歷史中心，該城中享有治外法權的聖座房地產和城外聖保祿大殿之名被聯合國教科文組織列入世界文化遺產。
+                            </div>
+                        </div>
+                        <!-- 卡片5 -->
+                        <div class="row row-cols-1 row-cols-md-2 pt-5">
+                            <div class="col"><img src="./EU/eu05.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">聖索菲亞（希臘語：Ἁγία Σοφία ；土耳其語：Ayasofya
+                                Camii）是位於現今土耳其伊斯坦堡的宗教建築，舊稱聖索菲亞大教堂，有近一千五百年的漫長歷史，因其巨大的圓頂而聞名於世，是一幢「改變了建築史」的拜占庭式建築典範。
+
+                                索菲亞在希臘語裡的意思是神聖智慧。其拉丁語名稱則為Sancta Sophia或Sancta Sapientia，希臘語全名是「Ναός τῆς Ἁγίας τοῦ Θεοῦ
+                                Σοφίας」，解作「上帝聖智教堂」，教堂供奉在正教神學裡的耶穌。大教堂稱為「聖索菲亞」（Ἁγία
+                                Σοφία），是特別獻給天主聖智的那一位，即為耶穌基督。這種對耶穌的稱呼可能源自使徒保羅在《哥林多前書》第1章第24節參中對基督的描繪：「但在那蒙召的，無論是猶太人、希臘人，基督總為神的能力，神的智慧（Σοφία）」。
+                            </div>
+                        </div>
+                        <!-- 卡片6 -->
+                        <div class="row row-cols-1 row-cols-md-2 flex-md-row-reverse pt-5">
+                            <div class="col"><img src="./EU/eu06.jpg" class="img-fluid" style="max-height: 500px;">
+                            </div>
+                            <div class="col card-bg">羅浮宮（法語：Musée du Louvre,英語 /ˈluːv(rə)/
+                                ），正式名稱為羅浮博物館，位於法國巴黎市中心的塞納河邊，原是建於12世紀末至13世紀初的王宮，現在是一所綜合博物館，亦是世界上最大的藝術博物館之一，以及參觀人數最多的博物館，是巴黎中心最知名的地標。
+
+                                羅浮宮的建築物始建於1190年左右，並在近代曾多次進行擴建，今天所見的模樣則一個巨大的翼樓和亭閣建築群，主要組成部分的總面積則超過 60,600 平方公尺（652,000
+                                平方英尺），館內永久收藏則包括雕塑、繪畫、美術工藝及古代東方、古代埃及和古希臘羅馬等7個分類，主要收藏1860年以前的藝術作品與考古文物，羅浮宮博物館在1793年8月10日開幕起正式對公眾開放，平均每天有
+                                15,000 名遊客到此參觀，其中 65% 是外國遊客。</div>
+                        </div>
+                    </div>
+                    <!-- 購買卡片內容 -->
+                    <div class="container border-top py-3">
+                        <div class="row row-cols-1 row-cols-md-4 g-3 a0">
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./EU/eu06.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">英法雙國10日-好事成雙.溫莎古堡.歐洲之星.凡爾賽宮 </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            倫敦/巴黎 , 英國/法國</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./EU/eu02.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">西班牙全覽10日-馬德里.巴塞隆納.璀璨摩爾風情</h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            巴塞隆納/哥多華/格拉納達/馬德里/賽維亞/托雷多/瓦倫西亞 , 西班牙</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./EU/eu04.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">精彩義大利10日-托斯卡尼豔陽下.天空之城.羅馬假期 </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            佛羅倫斯/米蘭/比薩/羅馬/威尼斯 , 義大利</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col bg-light p-2 cardStyle">
+                                <div class="card"><img class="img-fluid" src="./EU/eu06.jpg">
+                                    <div class="card-body">
+                                        <h4 class="cardTitle">《魅力歐洲》巴黎拜金女7天~羅浮宮、瘋購物、奧薇小鎮、瑪黑區 </h4>
+                                        <p class="tabCardText mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-airplane-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                            </svg>台北-桃園機場</p>
+                                        <p class="tabCardText"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-geo-alt-fill text-danger"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            巴黎 , 法國</p>
+                                        <p class="card-text price">NT$99.000</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <div class="b-example-divider"></div>
+    <footer class="container-fluid m-0 row row-cols-2 row-cols-lg-5 row-cols-md-2 border-top pt-3">
+        <div class="col mb-3">
+            <img src="./logo1.png" class="navbar-brand img-fluid">
+        </div>
+        <div class="col mb-3 d-flex align-items-center">
+            <div class="navbar-text p-0">
+                <p class="mb-0 tabColor" style="font-size: 0.7rem;">Northwest Travel Service Co., Ltd. (Lonely
+                    Travel
+                    Business) 22F, No. 960, Section 2, Taiwan Avenue, Xitun District, Taichung City 786 Jiaoguanzong No.
+                    9487. QBGZ No. 0078 Representative: Darth Vader. Customer Service Contact: Anakin Skywalker Unified
+                    number: 12345678</p>
+            </div>
+        </div>
+        <div class="col mb-3 text-center">
+            <div class="pt-5">
+                <h5><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 20 20">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                    </svg>關於我們</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">我們是誰</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">我們在哪</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">我們做什麼</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">訂購須知</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">網頁導覽</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col mb-3 text-center">
+            <div class="pt-5">
+                <h5><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-buildings-fill" viewBox="0 0 20 20">
+                        <path
+                            d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V.5ZM2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-1 2v1H2v-1h1Zm1 0h1v1H4v-1Zm9-10v1h-1V3h1ZM8 5h1v1H8V5Zm1 2v1H8V7h1ZM8 9h1v1H8V9Zm2 0h1v1h-1V9Zm-1 2v1H8v-1h1Zm1 0h1v1h-1v-1Zm3-2v1h-1V9h1Zm-1 2h1v1h-1v-1Zm-2-4h1v1h-1V7Zm3 0v1h-1V7h1Zm-2-2v1h-1V5h1Zm1 0h1v1h-1V5Z" />
+                    </svg>相關企業</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">雄獅旅遊(02-8793-9608)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">五福旅遊(02-2547-1155)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">東南旅遊(02-412-8688)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">燦星旅遊網(02-7753-6666)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">山富旅行社(02-449-3535)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col mb-3 text-center">
+            <div class="pt-5">
+                <h5><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-telephone-forward-fill" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.761.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
+                    </svg>服務據點</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">台中(02-1263-9128)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">台北(04-8533-1238)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">桃園(03-4642-5465)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">台南(06-8553-9278)</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0">高雄(07-8113-9138)</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="btn btn-danger" style="position: fixed;right: 1%;bottom: 5%;"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+        </svg></a>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

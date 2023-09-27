@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Bootstrap/_css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./Bootstrap/_js/bootstrap.bundle.js"></script>
+    <link rel="shortcut icon" href="./logo1.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <title>西北旅行Westnorth</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="navbar p-4">
+            <img src="./logo3-removebg-preview.png" class="img-fluid">
+            <ul class="navbar-nav flex-row align-items-center">
+                <div class="paystep text-bg-success">1</div>
+                <li class="nav-item">行程介紹</li>
+                <div class="paystep ms-3 text-bg-success">2</div>
+                <li class="nav-item">選擇旅客人數</li>
+                <div class="paystep ms-3  text-bg-success">3</div>
+                <li class="nav-item">填寫旅客資料</li>
+                <div class="paystep ms-3 text-bg-danger">4</div>
+                <li class="nav-item">選擇付款方式</li>
+                <div class="paystep ms-3">5</div>
+                <li class="nav-item">完成訂購</li>
+            </ul>
+        </div>
+    </header>
+    <div class="container d-flex">
+        <main class="container w-75">
+            <div class="bg-white rounded-3 p-4 mb-5 d-flex">
+                <div class="w-75">
+                    <h3 class="text-success fw-bold text-center">恭喜您，您的訂單已成立!</h3>
+                    <p class="text-center">請選擇一種付款方式</p>
+                    <select class="mb-2 ms-2">
+                        <option value="1">信用卡/金融卡</option>
+                        <option value="2" disabled>郵局匯款</option>
+                        <option value="3" disabled>行動支付</option>
+                        <option value="4" disabled>PayPal</option>
+                    </select>
+                    <div class="bg-white rounded-3 p-2">
+                        <table class="w-100">
+                            <tr class="border">
+                                <th class="border w-50">訂單編號 : Order Number</th>
+                                <td class="border">03432538</td>
+                            </tr>
+                            <tr class="border">
+                                <th class="border w-50">訂單金額 : Amount</th>
+                                <td class="border">NT$<span> 37,900</span></td>
+                            </tr>
+                            <tr class="border">
+                                <th class="border w-50">信用卡卡號 : <p class="m-0">Credit Card Number</p>
+                                </th>
+                                <td class="border"><input type="text"></td>
+                            </tr>
+                            <tr class="border">
+                                <th class="border w-50">有效月年 : Expiry Date</th>
+                                <td class="border"><select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>月<select>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                    </select>年</td>
+                            </tr>
+                            <tr class="border">
+                                <th class="border w-50">卡片背面後三碼 : CVN</th>
+                                <td class="border">安全碼: <input type="text" class="w-25"></td>
+                            </tr>
+                        </table>
+                        <button class="btn btn-danger mt-2"
+                            onclick="alert('付款成功!');window.location.href = './pay4.html';">確認付款</button>
+                    </div>
+                </div>
+                <div class="w-25">
+                    <h3>《心心向榮》【四都日本環球影城】京都.大阪.神戶.奈良(長榮午/晚)</h3>
+                    <img src="./usj-g94d95610f_640.jpg" class="img-fluid">
+                </div>
+            </div>
+            <h3>訂單明細</h3>
+            <div class="d-flex">
+                <p class="fs-4 m-0">訂單編號:<span class="price">03432538</span></p>
+                <p class="fs-4 ms-auto mb-0">訂單成立時間:<span id="time">XXXX-XX-XX XX:XX</span></p>
+            </div>
+            <div class="bg-white rounded-3 p-2 mb-5 ">
+                <div>
+                    <h3>《心心向榮》【四都日本環球影城】京都.大阪.神戶.奈良(長榮午/晚)</h3>
+                </div>
+                <div>
+                    <table class="table">
+                        <tr>
+                            <th>團號</th>
+                            <td>OSA05BR23630T01</td>
+                        </tr>
+                        <tr>
+                            <th>參團狀態</th>
+                            <td>候補</td>
+                        </tr>
+                        <tr>
+                            <th>出發日期</th>
+                            <td>2023-06-30 (五)~2023-07-04 (二) 5天4夜</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="7" class="">參考航班</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">
+                                <pre>2023-06-30 台灣桃園國際機場 關西機場
+13:35 台北市 TPE
+   &darr;                          
+17:15 大阪 OSA</pre>
+                            </th>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                            <th rowspan="3">
+                                <pre>2023-06-30 台灣桃園國際機場 關西機場
+17:15 大阪 OSA
+   &darr;                          
+13:35 台北市 TPE</pre>
+                            </th>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                            <th>住宿飯店</th>
+                            <td>參考行程介紹之飯店</td>
+                        </tr>
+                    </table>
+                    <table class="table">
+                        <tr>
+                            <th rowspan="3">
+                                <p>聯絡人</p>
+                            </th>
+                            <td colspan="2" class="fw-bold">Leobro</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>手機號碼: <span class="fw-bold">09xx-xxx-231</span></p>
+                            </td>
+                            <td>
+                                <p>連絡電話: <span class="fw-bold">04-8533-1238</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>E-mail: <span class="fw-bold">12345@gmail.com</span></p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">旅客人數</th>
+                            <td rowspan="2">
+                                <p><span class="price me-1">1</span>位大人</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="form-select">
+                                    <option value="1">
+                                        <p>杜正笙 <span>Leobro,Lin </span><span>男</span></p>
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>備註</th>
+                            <td>無備註</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="text-end fs-4 fw-bold">總金額<span class="price ms-2">NT$37,900</span></p>
+                </div>
+            </div>
+        </main>
+        <aside class="sticky-top vh-100 w-25 d-flex flex-column justify-content-evenly">
+            <div class="bg-white w-100 rounded-3 p-2">
+                <h3>訂購資訊</h3>
+                <p>團費</p>
+                <div class="d-flex flex-column">
+                    <ol class="mb-0 p-0">
+                        <li class="d-flex">
+                            <p class="paytext">大人</p>
+                            <p class="ms-auto">x<span class="fw-bold fs-5 count">1</span></p>
+                        </li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="text-bg-primary d-flex fw-bold rounded-3 p-2">
+                    <p class="m-0 text-center p-2">總金額</p>
+                    <p class="ms-auto my-0 fs-4">NT$<span class="totalP">37,900</span></p>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary w-100 fs-5 mb-2 p-2" data-bs-toggle="modal"
+                    data-bs-target="#order">訂單查詢</button>
+                <button type="button" class="btn btn-secondary w-100 fs-5 mb-2 p-2">列印訂單明細</button>
+            </div>
+        </aside>
+    </div>
+    <div class="modal fade" id="order" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="order" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 fw-bold">訂單查詢</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="./order.html#orderTitle">
+                    <div class="modal-body">
+                        <p class="fs-2">訂單編號</p>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-3" id="floatingName3" autocomplete="off"
+                                required>
+                            <label for="floatingName3">請輸入您的訂單編號</label>
+                        </div>
+                        <p class="fs-2">E-mail</p>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" id="floatingmail3" autocomplete="off"
+                                required>
+                            <label for="floatingmail3">請輸入您的電子信箱</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary w-100">開始查詢</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./pay.js"></script>
+</body>
